@@ -77,111 +77,90 @@ pub struct Elf64Shdr {
     pub sh_entsize: Elf64Word,    /* Entry size if section holds table */
 }
 
-// void disassemble(int32_t fd, Elf32Ehdr eh, Elf32Shdr* sh_tbl);
 fn disassemble(fd: i32, eh: Elf32Ehdr, sh_tbl: *mut Elf32Shdr) {
     ()
 }
 
-// void disassemble64(int32_t fd, Elf64Ehdr eh, Elf64Shdr* sh_tbl);
 fn disassemble64(fd: i32, eh: Elf32Ehdr, sh_tbl: *mut Elf64Shdr) {
     ()
 }
 
-// void read_elf_header64(int32_t fd, Elf64Ehdr *elf_header);
 fn read_elf_header64(fd: i32, elf_header: *mut Elf64Ehdr) {
     ()
 }
 
-// Functions for x86_64
+/* Functions for x86_64 */
 
-// bool is_ELF64(Elf64Ehdr eh);
 fn is_elf64(eh: Elf64Ehdr) {
     ()
 }
 
-// void print_elf_header64(Elf64Ehdr elf_header);
 fn print_elf_header64(elf_header: Elf64Ehdr) {
     ()
 }
 
-// void read_section_header_table64(int32_t fd, Elf64Ehdr eh, Elf64Shdr sh_table[]);
 fn read_section_header_table64(fd: i32, eh: Elf64Ehdr, sh_table: Vec<Elf64Shdr>) {
     ()
 }
 
-// char * read_section64(int32_t fd, Elf64Shdr sh);
 fn read_section64(fd: i32, sh: Elf64Shdr) -> String {
     "yay".to_string()
 }
 
-// void print_section_headers64(int32_t fd, Elf64Ehdr eh, Elf64Shdr sh_table[]);
 fn print_section_headers64(fd: i32, eh: Elf64Ehdr, sh_table: Vec<Elf64Shdr>) {
     ()
 }
 
-// void print_symbol_table64(int32_t fd,Elf64Ehdr eh,Elf64Shdr sh_table[],uint32_t symbol_table);
 fn print_symbol_table64(fd: i32, eh: Elf64Ehdr, sh_table: Vec<Elf64Shdr>, symbol_table: u32) {
     ()
 }
 
-//void print_symbols64(int32_t fd, Elf64Ehdr eh, Elf64Shdr sh_table[]);
 fn print_symbols64(fd: i32, eh: Elf64Ehdr, sh_table: Vec<Elf64Shdr>) {
     ()
 }
 
-// void save_text_section64(int32_t fd, Elf64Ehdr eh, Elf64Shdr sh_table[]);
 fn save_text_section64(fd: i32, eh: Elf64Ehdr, sh_table: Vec<Elf64Shdr>) {
     ()
 }
 
-// void read_elf_header(int32_t fd, Elf32Ehdr *elf_header);
 fn read_elf_header(fd: i32, elf_header: *mut Elf32Ehdr) {
     ()
 }
 
-// Functions for 32 bit
+/* Functions for 32 bit */
 
-// bool is_ELF(Elf32Ehdr eh);
 fn is_elf(eh: Elf32Ehdr) -> bool {
     true
 }
 
-// void print_elf_header(Elf32Ehdr elf_header);
 fn print_elf_header(elf_header: Elf32Ehdr) {
     ()
 }
 
-// void read_section_header_table(int32_t fd, Elf32Ehdr eh, Elf32Shdr sh_table[]);
 fn read_section_header_table(fd: i32, eh: Elf32Ehdr, sh_table: Vec<Elf32Shdr>) {
     ()
 }
 
-// char * read_section(int32_t fd, Elf32Shdr sh);
 fn read_section(fd: i32, sh: Elf32Shdr) -> String {
     "yay".to_string()
 }
 
-// void print_section_headers(int32_t fd, Elf32Ehdr eh, Elf32Shdr sh_table[]);
 fn print_section_headers(fd: i32, eh: Elf32Ehdr, sh_table: Vec<Elf32Shdr>) {
     ()
 }
 
-// void print_symbol_table(int32_t fd,Elf32Ehdr eh,Elf32Shdr sh_table[],uint32_t symbol_table);
 fn print_symbol_table(fd: i32, eh: Elf32Ehdr, sh_table: Vec<Elf32Shdr>, symbol_table: u32) {
     ()
 }
 
-// void print_symbols(int32_t fd, Elf32Ehdr eh, Elf32Shdr sh_table[]);
 fn print_symbols(fd: i32, eh: Elf32Ehdr, sh_table: Vec<Elf32Shdr>) {
     ()
 }
 
-// void save_text_section(int32_t fd, Elf32Ehdr eh, Elf32Shdr sh_table[]);
 fn save_text_section(fd: i32, eh: Elf32Ehdr, sh_table: Vec<Elf32Shdr>) {
     ()
 }
 
-// bool is64Bit(Elf32Ehdr eh);
 fn is_64bit(eh: Elf32Ehdr) -> bool {
     true
 }

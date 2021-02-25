@@ -211,10 +211,6 @@ impl fmt::Display for Elf64Ehdr {
     }
 }
 
-fn print_elf_header64(elf_header: Elf64Ehdr) {
-    ()
-}
-
 fn read_section_header_table64(fd: i32, eh: Elf64Ehdr, sh_table: Vec<Elf64Shdr>) {
     ()
 }
